@@ -15,21 +15,22 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background-color: #f0f8ff; /* Azul claro */
+      background-color: #2980b9; /* Azul más oscuro */
       background-image: url('https://www.transparenttextures.com/patterns/just-grey.png'); /* Patrón minimalista */
       background-repeat: repeat;
-      color: #2c3e50;
+      color: #ecf0f1;
     }
 
     h1 {
       font-size: 2.5em;
       margin-top: 50px;
-      color: #34495e;
+      color: #ecf0f1;
     }
 
     p {
       font-size: 1.2em;
       margin: 20px 0;
+      color: #ecf0f1;
     }
 
     #codigo { 
@@ -67,11 +68,11 @@
       width: 100%;
       text-align: center;
       font-size: 1em;
-      color: #7f8c8d;
+      color: #ecf0f1;
     }
 
     #footer a {
-      color: #2980b9;
+      color: #3498db;
       text-decoration: none;
     }
 
@@ -79,28 +80,41 @@
       text-decoration: underline;
     }
 
-    /* Añadir iconos al patrón */
+    /* Añadir iconos al fondo */
     .icono {
-      font-size: 4em;
-      color: #3498db;
-      opacity: 0.2;
+      font-size: 2em; /* Iconos más pequeños */
+      color: #ecf0f1; 
+      opacity: 0.1;
       position: absolute;
-      top: 20px;
-      left: 20px;
       z-index: -1;
     }
 
-    .icono:nth-child(2) { top: 80px; left: 100px; }
-    .icono:nth-child(3) { top: 150px; left: 200px; }
-    .icono:nth-child(4) { top: 250px; left: 300px; }
+    /* Posicionamiento de los iconos por toda la página */
+    .icono:nth-child(1) { top: 10%; left: 5%; }
+    .icono:nth-child(2) { top: 25%; left: 15%; }
+    .icono:nth-child(3) { top: 40%; left: 30%; }
+    .icono:nth-child(4) { top: 60%; left: 10%; }
+    .icono:nth-child(5) { top: 75%; left: 20%; }
+    .icono:nth-child(6) { top: 50%; left: 50%; }
+    .icono:nth-child(7) { top: 30%; left: 70%; }
+    .icono:nth-child(8) { top: 10%; left: 85%; }
+    .icono:nth-child(9) { top: 80%; left: 80%; }
+    .icono:nth-child(10) { top: 15%; left: 60%; }
   </style>
 </head>
 <body>
-  <!-- Iconos de refrigeración en el fondo -->
+  <!-- Iconos de refrigeración distribuidos por la página -->
   <i class="fas fa-snowflake icono"></i>
   <i class="fas fa-thermometer-half icono"></i>
   <i class="fas fa-fan icono"></i>
-  
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+
   <h1>Bienvenido</h1>
   <p>Presiona el botón para obtener tu código único:</p>
   <button id="btnGenerar" onclick="generarCodigo()">Generar Código</button>
@@ -132,11 +146,12 @@
       document.getElementById('btnGenerar').disabled = true;
 
       // Marcar que ya se generó el código
-      
+    
     }
   </script>
 </body>
 </html>
+
 
 
 
