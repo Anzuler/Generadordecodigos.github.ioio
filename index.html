@@ -50,33 +50,6 @@
     let codigoGenerado = false; // Para evitar generar el código más de una vez
 
     function generarCodigo() {
-      if (codigoGenerado) return; // Si ya se generó, no hacer nada
+      if (codigo
 
-      // Generar código único
-      const longitud = 8; // longitud del código
-      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-      let codigo = '';
-      for (let i = 0; i < longitud; i++) {
-        const randomIndex = Math.floor(Math.random() * caracteres.length);
-        codigo += caracteres[randomIndex];
-      }
-
-      // Mostrar el código
-      document.getElementById('codigo').textContent = codigo;
-
-      // Deshabilitar el botón para evitar más clics
-      document.getElementById('btnGenerar').disabled = true;
-
-      // Marcar que ya se generó el código
-      codigoGenerado = true;
-    }
-  </script>
-</body>
-</html>
-
-      codigoGenerado = true;
-    }
-  </script>
-</body>
-</html>
 
