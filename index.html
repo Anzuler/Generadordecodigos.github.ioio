@@ -19,18 +19,20 @@
       background-image: url('https://www.transparenttextures.com/patterns/just-grey.png'); /* Patrón minimalista */
       background-repeat: repeat;
       color: white; /* Color blanco para todas las letras */
+      position: relative;
+      overflow-x: hidden;
     }
 
     h1 {
       font-size: 2.5em;
       margin-top: 50px;
-      color: white; /* Título en blanco */
+      color: white;
     }
 
     p {
       font-size: 1.2em;
       margin: 20px 0;
-      color: white; /* Texto en blanco */
+      color: white;
     }
 
     #codigo { 
@@ -40,7 +42,7 @@
       font-weight: bold;
     }
 
-    /* Estilos del botón */
+    /* Botón */
     button { 
       padding: 12px 25px; 
       font-size: 1.2em; 
@@ -68,7 +70,7 @@
       width: 100%;
       text-align: center;
       font-size: 1em;
-      color: white; /* Pie de página en blanco */
+      color: white;
     }
 
     #footer a {
@@ -80,47 +82,61 @@
       text-decoration: underline;
     }
 
-    /* Iconos: tamaño base más pequeño y menos opacidad */
-.icono {
-  font-size: 2.2em; 
-  color: #0a2e55;
-  opacity: 0.25;
-  position: absolute;
-  z-index: -1;
-}
+    /* Iconos de fondo */
+    .icono {
+      font-size: 2.2em; 
+      color: #0a2e55;
+      opacity: 0.25;
+      position: absolute;
+      z-index: -1;
+    }
 
-/* Distribución: menos iconos, posiciones más equilibradas */
-.icono:nth-child(1) { top: 5%; left: 10%; }
-.icono:nth-child(2) { top: 10%; left: 80%; }
-.icono:nth-child(3) { top: 25%; left: 20%; }
-.icono:nth-child(4) { top: 25%; left: 70%; }
-.icono:nth-child(5) { top: 40%; left: 15%; }
-.icono:nth-child(6) { top: 40%; left: 75%; }
-.icono:nth-child(7) { top: 55%; left: 10%; }
-.icono:nth-child(8) { top: 55%; left: 80%; }
-.icono:nth-child(9) { top: 70%; left: 20%; }
-.icono:nth-child(10) { top: 70%; left: 70%; }
-.icono:nth-child(11) { top: 85%; left: 10%; }
-.icono:nth-child(12) { top: 85%; left: 80%; }
+    /* Distribución general */
+    .icono:nth-child(1) { top: 5%; left: 10%; }
+    .icono:nth-child(2) { top: 10%; left: 80%; }
+    .icono:nth-child(3) { top: 25%; left: 20%; }
+    .icono:nth-child(4) { top: 25%; left: 70%; }
+    .icono:nth-child(5) { top: 40%; left: 15%; }
+    .icono:nth-child(6) { top: 40%; left: 75%; }
+    .icono:nth-child(7) { top: 55%; left: 10%; }
+    .icono:nth-child(8) { top: 55%; left: 80%; }
+    .icono:nth-child(9) { top: 70%; left: 20%; }
+    .icono:nth-child(10) { top: 70%; left: 70%; }
+    .icono:nth-child(11) { top: 85%; left: 10%; }
+    .icono:nth-child(12) { top: 85%; left: 80%; }
 
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
-  .icono {
-    font-size: 1.5em;  /* iconos más pequeños */
-    opacity: 0.2;      /* aún más sutil */
-  }
+    /* Responsive: móviles */
+    @media (max-width: 600px) {
+      .icono {
+        font-size: 1.5em;
+        opacity: 0.2;
+      }
 
-  /* Reubicar iconos para que no queden tan pegados */
-  .icono:nth-child(1) { top: 8%; left: 15%; }
-  .icono:nth-child(2) { top: 8%; left: 75%; }
-  .icono:nth-child(3) { top: 30%; left: 20%; }
-  .icono:nth-child(4) { top: 30%; left: 70%; }
-  .icono:nth-child(5) { top: 55%; left: 25%; }
-  .icono:nth-child(6) { top: 55%; left: 65%; }
-  .icono:nth-child(7) { top: 80%; left: 20%; }
-  .icono:nth-child(8) { top: 80%; left: 70%; }
-}
-
+      .icono:nth-child(1) { top: 8%; left: 15%; }
+      .icono:nth-child(2) { top: 8%; left: 75%; }
+      .icono:nth-child(3) { top: 30%; left: 20%; }
+      .icono:nth-child(4) { top: 30%; left: 70%; }
+      .icono:nth-child(5) { top: 55%; left: 25%; }
+      .icono:nth-child(6) { top: 55%; left: 65%; }
+      .icono:nth-child(7) { top: 80%; left: 20%; }
+      .icono:nth-child(8) { top: 80%; left: 70%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Iconos distribuidos (puedes cambiar iconos por otros si quieres) -->
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
 
   <h1>Bienvenido</h1>
   <p>Presiona el botón para obtener tu código único:</p>
@@ -132,13 +148,12 @@
   </div>
 
   <script>
-    let codigoGenerado = false; // Para evitar generar el código más de una vez
+    let codigoGenerado = false;
 
     function generarCodigo() {
-      if (codigoGenerado) return; // Si ya se generó, no hacer nada
+      if (codigoGenerado) return;
 
-      // Generar código único
-      const longitud = 8; // longitud del código
+      const longitud = 8;
       const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       let codigo = '';
       for (let i = 0; i < longitud; i++) {
@@ -146,18 +161,14 @@
         codigo += caracteres[randomIndex];
       }
 
-      // Mostrar el código
       document.getElementById('codigo').textContent = codigo;
-
-      // Deshabilitar el botón para evitar más clics
       document.getElementById('btnGenerar').disabled = true;
-
-      // Marcar que ya se generó el código
-      
+     
     }
   </script>
 </body>
 </html>
+
 
 
 
