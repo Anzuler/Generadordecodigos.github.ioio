@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C骴igo 趎ico</title>
+  <title>C贸digo 脷nico</title>
   <style>
     body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
     #codigo { font-size: 2em; color: #2c3e50; margin-top: 20px; }
     button { padding: 10px 20px; font-size: 1em; cursor: pointer; }
+    button:disabled { background-color: #ccc; cursor: not-allowed; }
   </style>
 </head>
 <body>
   <h1>Bienvenido</h1>
-  <p>Presiona el bot髇 para obtener tu c骴igo 鷑ico:</p>
-  <button onclick="generarCodigo()">Generar C骴igo</button>
+  <p>Presiona el bot贸n para obtener tu c贸digo 煤nico:</p>
+  <button id="btnGenerar" onclick="generarCodigo()">Generar C贸digo</button>
   <div id="codigo"></div>
 
   <script>
+    let codigoGenerado = false; // Para evitar generar el c贸digo m谩s de una vez
+
     function generarCodigo() {
-      const longitud = 8; // longitud del c骴igo
+      if (codigoGenerado) return; // Si ya se gener贸, no hacer nada
+
+      // Generar c贸digo 煤nico
+      const longitud = 8; // longitud del c贸digo
       const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       let codigo = '';
       for (let i = 0; i < longitud; i++) {
         const randomIndex = Math.floor(Math.random() * caracteres.length);
         codigo += caracteres[randomIndex];
       }
+
+      // Mostrar el c贸digo
       document.getElementById('codigo').textContent = codigo;
+
+      // Deshabilitar el bot贸n para evitar m谩s clics
+      document.getElementById('btnGenerar').disabled = true;
+
+      // Marcar que ya se gener贸 el c贸digo
+      codigoGenerado = true;
     }
   </script>
 </body>
 </html>
+
