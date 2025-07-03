@@ -13,7 +13,67 @@
       min-height: 100vh;
     }
     #codigo { 
-      font-size:
+      font-size: 2em; 
+      color: #2c3e50; 
+      margin-top: 20px; 
+    }
+    button { 
+      padding: 10px 20px; 
+      font-size: 1em; 
+      cursor: pointer; 
+    }
+    button:disabled { 
+      background-color: #ccc; 
+      cursor: not-allowed; 
+    }
+    #footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido</h1>
+  <p>Presiona el botón para obtener tu código único:</p>
+  <button id="btnGenerar" onclick="generarCodigo()">Generar Código</button>
+  <div id="codigo"></div>
+
+  <div id="footer">
+    Para comunicarte con nosotros envía un mensaje de WhatsApp al 0412-2008828
+  </div>
+
+  <script>
+    let codigoGenerado = false; // Para evitar generar el código más de una vez
+
+    function generarCodigo() {
+      if (codigoGenerado) return; // Si ya se generó, no hacer nada
+
+      // Generar código único
+      const longitud = 8; // longitud del código
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let codigo = '';
+      for (let i = 0; i < longitud; i++) {
+        const randomIndex = Math.floor(Math.random() * caracteres.length);
+        codigo += caracteres[randomIndex];
+      }
+
+      // Mostrar el código
+      document.getElementById('codigo').textContent = codigo;
+
+      // Deshabilitar el botón para evitar más clics
+      document.getElementById('btnGenerar').disabled = true;
+
+      // Marcar que ya se generó el código
+      
+    }
+  </script>
+</body>
+</html>
+
 
 
 
