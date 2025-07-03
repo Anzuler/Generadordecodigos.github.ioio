@@ -80,80 +80,85 @@
       text-decoration: underline;
     }
 
-    /* Añadir iconos al fondo */
+    /* Estilos para los iconos de fondo */
     .icono {
-      font-size: 2.5em; /* Iconos más grandes */
-      color: #1f3a63; /* Azul más oscuro para los iconos */
-      opacity: 0.15; /* Menos opacidad para hacerlos más sutiles */
+      font-size: 3em; /* Iconos más grandes */
+      color: #1a3d7e; /* Azul oscuro */
+      opacity: 0.3; /* Opacidad sutil */
       position: absolute;
       z-index: -1;
     }
 
-    /* Posicionamiento de los iconos por toda la página (más espaciados y distribuidos) */
-    .icono:nth-child(1) { top: 2%; left: 5%; }
-    .icono:nth-child(2) { top: 7%; left: 18%; }
-    .icono:nth-child(3) { top: 13%; left: 30%; }
-    .icono:nth-child(4) { top: 20%; left: 40%; }
-    .icono:nth-child(5) { top: 26%; left: 55%; }
-    .icono:nth-child(6) { top: 32%; left: 65%; }
-    .icono:nth-child(7) { top: 38%; left: 10%; }
-    .icono:nth-child(8) { top: 43%; left: 22%; }
-    .icono:nth-child(9) { top: 49%; left: 35%; }
-    .icono:nth-child(10) { top: 55%; left: 48%; }
-    .icono:nth-child(11) { top: 60%; left: 60%; }
-    .icono:nth-child(12) { top: 66%; left: 73%; }
-    .icono:nth-child(13) { top: 73%; left: 12%; }
-    .icono:nth-child(14) { top: 78%; left: 25%; }
-    .icono:nth-child(15) { top: 83%; left: 37%; }
-    .icono:nth-child(16) { top: 88%; left: 50%; }
-    .icono:nth-child(17) { top: 93%; left: 62%; }
-    .icono:nth-child(18) { top: 5%; left: 77%; }
-    .icono:nth-child(19) { top: 12%; left: 85%; }
-    .icono:nth-child(20) { top: 20%; left: 92%; }
-    .icono:nth-child(21) { top: 27%; left: 18%; }
-    .icono:nth-child(22) { top: 35%; left: 29%; }
-    .icono:nth-child(23) { top: 42%; left: 41%; }
-    .icono:nth-child(24) { top: 50%; left: 54%; }
-    .icono:nth-child(25) { top: 58%; left: 65%; }
-    .icono:nth-child(26) { top: 65%; left: 77%; }
-    .icono:nth-child(27) { top: 72%; left: 84%; }
-    .icono:nth-child(28) { top: 80%; left: 10%; }
-    .icono:nth-child(29) { top: 88%; left: 15%; }
-    .icono:nth-child(30) { top: 95%; left: 20%; }
+    /* Ajustes de distribución de iconos con un grid */
+    .icono:nth-child(odd) { opacity: 0.4; }
+    .icono:nth-child(even) { opacity: 0.2; }
+
+    /* Reorganización de los iconos usando grid */
+    .icono-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Distribuye en columnas de tamaño dinámico */
+      grid-gap: 30px; /* Espacio entre iconos */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Ubicación individual de iconos */
+    .icono:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .icono:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .icono:nth-child(3) { grid-column: 3; grid-row: 2; }
+    .icono:nth-child(4) { grid-column: 4; grid-row: 2; }
+    .icono:nth-child(5) { grid-column: 5; grid-row: 3; }
+    .icono:nth-child(6) { grid-column: 6; grid-row: 3; }
+    .icono:nth-child(7) { grid-column: 1; grid-row: 4; }
+    .icono:nth-child(8) { grid-column: 2; grid-row: 4; }
+    .icono:nth-child(9) { grid-column: 3; grid-row: 5; }
+    .icono:nth-child(10) { grid-column: 4; grid-row: 5; }
+    .icono:nth-child(11) { grid-column: 5; grid-row: 6; }
+    .icono:nth-child(12) { grid-column: 6; grid-row: 6; }
+
+    /* Ajustes para pantallas más grandes */
+    @media (min-width: 768px) {
+      .icono-container {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Más grandes en pantallas grandes */
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Iconos de refrigeración distribuidos por la página -->
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
-  <i class="fas fa-snowflake icono"></i>
-  <i class="fas fa-thermometer-half icono"></i>
-  <i class="fas fa-fan icono"></i>
+  <!-- Contenedor para los iconos -->
+  <div class="icono-container">
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+    <i class="fas fa-snowflake icono"></i>
+    <i class="fas fa-thermometer-half icono"></i>
+    <i class="fas fa-fan icono"></i>
+  </div>
 
   <h1>Bienvenido</h1>
   <p>Presiona el botón para obtener tu código único:</p>
@@ -172,7 +177,26 @@
 
       // Generar código único
       const longitud = 8; // longitud del código
-      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let codigo = '';
+      for (let i = 0; i < longitud; i++) {
+        const randomIndex = Math.floor(Math.random() * caracteres.length);
+        codigo += caracteres[randomIndex];
+      }
+
+      // Mostrar el código
+      document.getElementById('codigo').textContent = codigo;
+
+      // Deshabilitar el botón para evitar más clics
+      document.getElementById('btnGenerar').disabled = true;
+
+      // Marcar que ya se generó el código
+      
+    }
+  </script>
+</body>
+</html>
+
 
 
 
