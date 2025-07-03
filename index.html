@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Código Único</title>
-  <!-- Enlace a los iconos de Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
@@ -59,10 +58,12 @@
       cursor: not-allowed; 
     }
 
-    /* Pie de página */
+    /* Pie de página fijo, pero un poco arriba del borde inferior */
     #footer {
-      position: relative;
-      margin-top: 40px;
+      position: fixed;
+      bottom: 20px; /* espacio desde la parte inferior, ajusta según tu gusto */
+      width: 100%;
+      text-align: center;
       font-size: 1em;
     }
 
@@ -106,7 +107,6 @@
     .icono:nth-child(19) { top: 95%; left: 25%; }
     .icono:nth-child(20) { top: 95%; left: 75%; }
 
-    /* Responsive: móviles */
     @media (max-width: 600px) {
       .icono {
         font-size: 1.5em;
@@ -116,7 +116,7 @@
   </style>
 </head>
 <body>
-  <!-- Iconos de fondo -->
+  <!-- Iconos -->
   <i class="fas fa-snowflake icono"></i>
   <i class="fas fa-thermometer-half icono"></i>
   <i class="fas fa-fan icono"></i>
@@ -160,7 +160,7 @@
       }
       document.getElementById('codigo').textContent = codigo;
       document.getElementById('btnGenerar').disabled = true;
-   
+      
     }
   </script>
 </body>
