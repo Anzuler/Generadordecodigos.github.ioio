@@ -58,10 +58,10 @@
       cursor: not-allowed; 
     }
 
-    /* Pie de página fijo, pero un poco arriba del borde inferior */
+    /* Footer fijo abajo pero un poco más arriba del borde */
     #footer {
       position: fixed;
-      bottom: 20px; /* espacio desde la parte inferior, ajusta según tu gusto */
+      bottom: 20px;
       width: 100%;
       text-align: center;
       font-size: 1em;
@@ -76,47 +76,62 @@
       text-decoration: underline;
     }
 
-    /* Iconos de fondo */
+    /* Iconos minimalistas */
     .icono {
-      font-size: 2.2em; 
+      font-size: 1.5em;
       color: #0a2e55;
-      opacity: 0.25;
+      opacity: 0.2;
       position: absolute;
       z-index: -1;
     }
 
-    /* Distribución con más iconos */
-    .icono:nth-child(1) { top: 5%; left: 10%; }
-    .icono:nth-child(2) { top: 10%; left: 80%; }
-    .icono:nth-child(3) { top: 25%; left: 20%; }
-    .icono:nth-child(4) { top: 25%; left: 70%; }
-    .icono:nth-child(5) { top: 40%; left: 15%; }
-    .icono:nth-child(6) { top: 40%; left: 75%; }
-    .icono:nth-child(7) { top: 55%; left: 10%; }
-    .icono:nth-child(8) { top: 55%; left: 80%; }
-    .icono:nth-child(9) { top: 70%; left: 20%; }
-    .icono:nth-child(10) { top: 70%; left: 70%; }
-    .icono:nth-child(11) { top: 85%; left: 10%; }
-    .icono:nth-child(12) { top: 85%; left: 80%; }
-    .icono:nth-child(13) { top: 15%; left: 50%; }
-    .icono:nth-child(14) { top: 35%; left: 50%; }
-    .icono:nth-child(15) { top: 60%; left: 50%; }
-    .icono:nth-child(16) { top: 80%; left: 50%; }
-    .icono:nth-child(17) { top: 5%; left: 40%; }
-    .icono:nth-child(18) { top: 5%; left: 60%; }
-    .icono:nth-child(19) { top: 95%; left: 25%; }
-    .icono:nth-child(20) { top: 95%; left: 75%; }
+    /* Muchas posiciones para cubrir mejor la pantalla */
+    .icono:nth-child(1) { top: 3%; left: 5%; }
+    .icono:nth-child(2) { top: 8%; left: 15%; }
+    .icono:nth-child(3) { top: 12%; left: 25%; }
+    .icono:nth-child(4) { top: 6%; left: 50%; }
+    .icono:nth-child(5) { top: 10%; left: 75%; }
+    .icono:nth-child(6) { top: 2%; left: 90%; }
+    .icono:nth-child(7) { top: 18%; left: 5%; }
+    .icono:nth-child(8) { top: 20%; left: 30%; }
+    .icono:nth-child(9) { top: 22%; left: 60%; }
+    .icono:nth-child(10) { top: 25%; left: 85%; }
+    .icono:nth-child(11) { top: 28%; left: 10%; }
+    .icono:nth-child(12) { top: 30%; left: 50%; }
+    .icono:nth-child(13) { top: 32%; left: 80%; }
+    .icono:nth-child(14) { top: 38%; left: 20%; }
+    .icono:nth-child(15) { top: 40%; left: 70%; }
+    .icono:nth-child(16) { top: 45%; left: 5%; }
+    .icono:nth-child(17) { top: 48%; left: 90%; }
+    .icono:nth-child(18) { top: 52%; left: 35%; }
+    .icono:nth-child(19) { top: 55%; left: 65%; }
+    .icono:nth-child(20) { top: 58%; left: 15%; }
+    .icono:nth-child(21) { top: 60%; left: 85%; }
+    .icono:nth-child(22) { top: 65%; left: 45%; }
+    .icono:nth-child(23) { top: 68%; left: 5%; }
+    .icono:nth-child(24) { top: 70%; left: 75%; }
+    .icono:nth-child(25) { top: 73%; left: 25%; }
+    .icono:nth-child(26) { top: 75%; left: 50%; }
+    .icono:nth-child(27) { top: 78%; left: 90%; }
+    .icono:nth-child(28) { top: 80%; left: 10%; }
+    .icono:nth-child(29) { top: 82%; left: 65%; }
+    .icono:nth-child(30) { top: 85%; left: 35%; }
+    .icono:nth-child(31) { top: 88%; left: 80%; }
+    .icono:nth-child(32) { top: 90%; left: 20%; }
+    .icono:nth-child(33) { top: 92%; left: 55%; }
+    .icono:nth-child(34) { top: 95%; left: 5%; }
+    .icono:nth-child(35) { top: 97%; left: 90%; }
 
     @media (max-width: 600px) {
       .icono {
-        font-size: 1.5em;
-        opacity: 0.2;
+        font-size: 1.2em;
+        opacity: 0.15;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Iconos -->
+  <!-- Muchos iconos repartidos -->
   <i class="fas fa-snowflake icono"></i>
   <i class="fas fa-thermometer-half icono"></i>
   <i class="fas fa-fan icono"></i>
@@ -137,6 +152,20 @@
   <i class="fas fa-fan icono"></i>
   <i class="fas fa-snowflake icono"></i>
   <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  <i class="fas fa-snowflake icono"></i>
 
   <h1>Bienvenido</h1>
   <p>Presiona el botón para obtener tu código único:</p>
@@ -160,7 +189,7 @@
       }
       document.getElementById('codigo').textContent = codigo;
       document.getElementById('btnGenerar').disabled = true;
-      
+     
     }
   </script>
 </body>
