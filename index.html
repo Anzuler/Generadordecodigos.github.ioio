@@ -4,46 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Código Único</title>
+  <!-- Enlace a los iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <style>
+    /* Estilos generales */
     body { 
       font-family: Arial, sans-serif; 
       text-align: center; 
-      margin-top: 50px; 
-      position: relative;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
+      background-color: #f0f8ff; /* Azul claro */
+      background-image: url('https://www.transparenttextures.com/patterns/just-grey.png'); /* Patrón minimalista */
+      background-repeat: repeat;
+      color: #2c3e50;
     }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 50px;
+      color: #34495e;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
     #codigo { 
-      font-size: 2em; 
-      color: #2c3e50; 
-      margin-top: 20px; 
+      font-size: 2.5em; 
+      color: #2980b9; 
+      margin-top: 20px;
+      font-weight: bold;
     }
+
+    /* Estilos del botón */
     button { 
-      padding: 10px 20px; 
-      font-size: 1em; 
+      padding: 12px 25px; 
+      font-size: 1.2em; 
       cursor: pointer; 
+      background-color: #3498db; 
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
     button:disabled { 
       background-color: #ccc; 
       cursor: not-allowed; 
     }
+
+    /* Pie de página */
     #footer {
       position: absolute;
       bottom: 20px;
       width: 100%;
       text-align: center;
       font-size: 1em;
-      color: #2c3e50;
+      color: #7f8c8d;
     }
+
+    #footer a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    #footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Añadir iconos al patrón */
+    .icono {
+      font-size: 4em;
+      color: #3498db;
+      opacity: 0.2;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: -1;
+    }
+
+    .icono:nth-child(2) { top: 80px; left: 100px; }
+    .icono:nth-child(3) { top: 150px; left: 200px; }
+    .icono:nth-child(4) { top: 250px; left: 300px; }
   </style>
 </head>
 <body>
+  <!-- Iconos de refrigeración en el fondo -->
+  <i class="fas fa-snowflake icono"></i>
+  <i class="fas fa-thermometer-half icono"></i>
+  <i class="fas fa-fan icono"></i>
+  
   <h1>Bienvenido</h1>
   <p>Presiona el botón para obtener tu código único:</p>
   <button id="btnGenerar" onclick="generarCodigo()">Generar Código</button>
   <div id="codigo"></div>
 
   <div id="footer">
-    Para comunicarte con nosotros envía un mensaje de WhatsApp al 0412-2008828
+    Para comunicarte con nosotros, <a href="https://wa.me/04122008828" target="_blank">envía un mensaje de WhatsApp</a> al 0412-2008828
   </div>
 
   <script>
