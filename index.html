@@ -82,50 +82,45 @@
 
     /* Estilos para los iconos de fondo */
     .icono {
-      font-size: 3em; /* Iconos más grandes */
+      font-size: 4em; /* Iconos más grandes */
       color: #1a3d7e; /* Azul oscuro */
       opacity: 0.3; /* Opacidad sutil */
       position: absolute;
       z-index: -1;
     }
 
-    /* Ajustes de distribución de iconos con un grid */
-    .icono:nth-child(odd) { opacity: 0.4; }
-    .icono:nth-child(even) { opacity: 0.2; }
-
-    /* Reorganización de los iconos usando grid */
+    /* Distribución de iconos */
     .icono-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Distribuye en columnas de tamaño dinámico */
-      grid-gap: 30px; /* Espacio entre iconos */
-      position: absolute;
+      position: fixed; /* Fija los iconos mientras se hace scroll */
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Espaciado entre iconos */
+      align-items: center;
+      pointer-events: none; /* Los iconos no interrumpen la interacción con otros elementos */
     }
 
-    /* Ubicación individual de iconos */
-    .icono:nth-child(1) { grid-column: 1; grid-row: 1; }
-    .icono:nth-child(2) { grid-column: 2; grid-row: 1; }
-    .icono:nth-child(3) { grid-column: 3; grid-row: 2; }
-    .icono:nth-child(4) { grid-column: 4; grid-row: 2; }
-    .icono:nth-child(5) { grid-column: 5; grid-row: 3; }
-    .icono:nth-child(6) { grid-column: 6; grid-row: 3; }
-    .icono:nth-child(7) { grid-column: 1; grid-row: 4; }
-    .icono:nth-child(8) { grid-column: 2; grid-row: 4; }
-    .icono:nth-child(9) { grid-column: 3; grid-row: 5; }
-    .icono:nth-child(10) { grid-column: 4; grid-row: 5; }
-    .icono:nth-child(11) { grid-column: 5; grid-row: 6; }
-    .icono:nth-child(12) { grid-column: 6; grid-row: 6; }
+    .icono {
+      flex: 0 0 auto;
+      margin: 10px; /* Separación entre los iconos */
+      opacity: 0.2; /* Sutilidad en los iconos */
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .icono:hover {
+      opacity: 0.6; /* Opacidad más alta al pasar el mouse */
+    }
 
     /* Ajustes para pantallas más grandes */
     @media (min-width: 768px) {
-      .icono-container {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Más grandes en pantallas grandes */
+      .icono {
+        font-size: 5em; /* Aumentar tamaño en pantallas más grandes */
       }
     }
+
   </style>
 </head>
 <body>
@@ -196,6 +191,7 @@
   </script>
 </body>
 </html>
+
 
 
 
